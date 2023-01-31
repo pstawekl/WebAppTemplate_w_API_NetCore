@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.List-of-users {
+  width: 100%;
+}

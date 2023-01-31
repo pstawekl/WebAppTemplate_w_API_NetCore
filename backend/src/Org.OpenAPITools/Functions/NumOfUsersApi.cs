@@ -32,15 +32,18 @@ namespace Org.OpenAPITools.Functions
         {
             try
             {
-                req.Headers.Add("Content-Type", "application/json");
-                req.Headers.Add("Access-Control-Allow-Origin", "*");
-                var listOfUsers = await GetList(numOfUsers);
+                //Console.WriteLine(req.Host);
+                //req.Headers.Add("Content-Type", "application/json");
+                //req.Headers.Add("Access-Control-Allow-Origin", "*");
+                var listOfUsers = await ResponseToApi(numOfUsers);
                 if (listOfUsers == null)
                 {
                     return new StatusCodeResult((int)HttpStatusCode.NotImplemented);
                 }
                 else
                 {
+                    //req.HttpContext.Response.Headers.Add("Content-Type", "application/json");
+                    //req.HttpContext.Response.WriteAsync(JsonConvert.SerializeObject(listOfUsers));
                     return JsonConvert.SerializeObject(listOfUsers);
                 }
                 //return (await ((Task<UsersList>)method.Invoke(this, new object[] { req, context, numOfUsers })).ConfigureAwait(false));
@@ -52,7 +55,7 @@ namespace Org.OpenAPITools.Functions
             }
         }
 
-        public async Task<object> GetList(string numOfUsers)
+        public async Task<object> ResponseToApi(string numOfUsers)
         {
             try
             {
