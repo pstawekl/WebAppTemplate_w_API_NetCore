@@ -1,0 +1,195 @@
+# schemas/Port.yaml
+type: object
+required:
+- name
+- login
+- id
+properties:
+  gender:
+    type: string
+    pattern: ^.{0,20}
+    description: none
+    example: "unknown"
+  name:
+    type: array
+    items:
+      title:
+        type: string
+        pattern: ^.{0,02}
+        description: "title"
+        example: "Mr/Mrs"
+      first:
+        type: string
+        pattern: ^.{0,70}
+        description: "first name"
+        example: "firstName"
+      last:
+        type: string
+        pattern: ^.{0,90}
+        description: "surname"
+        example: "surName"
+  location:
+    type: array
+    items:
+      street:
+        type: array
+        items:
+          number:
+            type: integer
+            description: street number
+            pattern: 0000
+          name:
+            type: string
+            pattern: ^.{0,20}
+            description: none
+            example: "12345"
+      city:
+        type: string
+        pattern: ^.{0,50}
+        description: city name
+        example: "cityName"    
+      state:
+        type: string
+        pattern: ^.{0,50}
+        description: state
+        example: "stateName"    
+      country:
+        type: string
+        pattern: ^.{0,50}
+        description: country
+        example: "country"
+      postcode:
+        type: integer
+        description: postCode
+      coordinaties:
+        type: array
+        items:
+          latitude:
+            type: string
+            pattern: ^.{0,50}
+            description: latitude
+            example: "-00.0000"
+          longitude:
+            type: string
+            pattern: ^.{0,50}
+            description: longitude
+            example: "-00.0000"
+      timezone:
+        type: array
+        items:
+          offset:
+            type: string
+            pattern: ^.{0,50}
+            description: offset
+            example: "-0:00"
+          descrpt:
+            type: string
+            pattern: ^.{0,50}
+            description: descrpt
+            example: "e.g. Alaska"
+  email:
+    type: string
+    pattern: ^.{0,50}
+    description: none
+    example: "unknown@unknown.com"
+  login:
+    type: array
+    items:
+      uuid:
+        type: string
+        pattern: ^.{0,100}
+        description: user uid
+        example: 391176cd-27ba-42ec-b17a-582caf62fe21
+      username:
+        type: string
+        pattern: ^.{0,75}
+        description: username
+        example: "someUserName65"
+      password:
+        type: string
+        pattern: ^.{0,20}
+        description: user password
+        example: "none"
+      salt:
+        type: string
+        pattern: ^.{0,20}
+        description: salt
+        example: "none"
+      md5:
+        type: string
+        pattern: ^.{0,125}
+        description: md5 hash
+        example: "32f6be120e7e1960d894db0567b026fa"
+      sha1:
+        type: string
+        pattern: ^.{0,512}
+        description: sha1 hash
+        example: "cd492623c7d1807f20c799e2eaaf24f64450e595"
+      sha256:
+        type: string
+        pattern: ^.{0,256}
+        description: sha256 hash
+        example: "5f9c8328ebc1e90dfd07379504dac235d39bd07af862b0c9bb9184515c13faa8"
+  dob:
+    type: array
+    items:
+      date:
+        type: string
+        pattern: ^.{0,24}
+        description: date string
+        example: "1975-05-08T18:58:04.611Z"
+      age:
+        type: integer
+        description: age
+        example: "none"
+  registered:
+    type: string
+    pattern: ^.{0,20}
+    description: none
+    example: "12345"
+  phone:
+    type: string
+    pattern: ^.{0,50}
+    description: none
+    example: "0000-0000000"
+  cell:
+    type: string
+    pattern: ^.{0,50}
+    description: none
+    example: "0000-0000000"
+  id:
+    type: array
+    items:
+      name:
+        type: string
+        pattern: ^.{0,25}
+        description: short name
+        example: "SVNR"
+      value:
+        type: string
+        pattern: ^.{0,20}
+        description: value
+        example: "none"
+  picture:
+    type: array
+    items:
+      large:
+        type: string
+        pattern: ^.{0,150}
+        description: link to large version of picture
+        example: "none"
+      medium:
+        type: string
+        pattern: ^.{0,150}
+        description: link to medium version of picture
+        example: "none"
+      thumbnail:
+        type: string
+        pattern: ^.{0,150}
+        description: link to thumbnail version of picture
+        example: "none"
+  nat:
+    type: string
+    pattern: ^.{0,2}
+    description: nation
+    example: "PL"  

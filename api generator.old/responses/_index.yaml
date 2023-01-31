@@ -1,0 +1,10 @@
+UnexpectedError:
+  $ref: "./UnexpectedError.yaml"
+NullResponse:
+  $ref: "./NullResponse.yaml"
+Created:
+  $ref: "./Created.yaml"
+Updated:
+  $ref: "./Updated.yaml"
+Deleted:
+  $ref: "./Deleted.yaml"

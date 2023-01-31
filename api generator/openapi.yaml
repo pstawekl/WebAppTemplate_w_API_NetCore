@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: Tank Measurement API
+  description: API for config.json in tank_measurement
+  version: 0.1.9
+servers:
+  - url: http://localhost:8080/
+    description: Optional server description, e.g. Main (production) server
+  - url: http://localhost:8080/test
+    description: Optional server description, e.g. Internal staging server for testing
+paths:
+  # ref to files ./resources/endpoint.yaml
+  /usersList/{numOfUsers}:
+    $ref: "./resources/UsersList.yaml"
+components:
+  schemas:
+    $ref: "./schemas/_index.yaml"
+  responses:
+    $ref: "./responses/_index.yaml"

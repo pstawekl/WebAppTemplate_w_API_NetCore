@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+simple/__init__.py
+simple/__open_alchemy_b6a3b2897c588a8c6e96985809ab02f4a2e450374fee215de677e5ed129ca381_cache__
+simple/spec.json
+simple.egg-info/PKG-INFO
+simple.egg-info/SOURCES.txt
+simple.egg-info/dependency_links.txt
+simple.egg-info/requires.txt
+simple.egg-info/top_level.txt

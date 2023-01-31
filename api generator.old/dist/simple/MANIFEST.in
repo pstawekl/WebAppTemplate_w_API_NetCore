@@ -1,0 +1,2 @@
+recursive-include simple *.json __open_alchemy_*_cache__
+remove .*

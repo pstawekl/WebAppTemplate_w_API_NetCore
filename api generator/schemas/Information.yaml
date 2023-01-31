@@ -1,0 +1,17 @@
+type: object
+required:
+  - status
+  - affected
+  - message
+properties:
+  status:
+    type: integer
+    format: int32
+    nullable: false
+  affected:
+    type: integer
+    format: int32
+    nullable: false
+  message:
+    type: string
+    nullable: true
