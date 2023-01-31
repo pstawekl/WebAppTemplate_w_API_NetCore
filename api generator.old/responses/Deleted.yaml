@@ -1,5 +1,0 @@
-description: Deleted
-content:
-  application/json:
-    schema:
-      $ref: "../schemas/Information.yaml"

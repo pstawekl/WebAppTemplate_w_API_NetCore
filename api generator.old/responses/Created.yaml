@@ -1,5 +1,0 @@
-description: Created
-content:
-  application/json:
-    schema:
-      $ref: "../schemas/Information.yaml"

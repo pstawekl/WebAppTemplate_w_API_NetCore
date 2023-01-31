@@ -1,4 +1,0 @@
-connexion
-Flask-SQLAlchemy
-OpenAlchemy
-OpenAlchemy[yaml]

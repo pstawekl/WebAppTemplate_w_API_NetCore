@@ -1,5 +1,0 @@
-description: Null response
-content:
-  application/json:
-    schema:
-      $ref: "../schemas/Information.yaml"

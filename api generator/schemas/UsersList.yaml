@@ -1,7 +1,0 @@
-# schemas/UsersList.yaml
-type: object
-required:
-- object
-properties:
-  objectsList:
-    type: object
